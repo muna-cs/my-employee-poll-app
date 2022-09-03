@@ -17,7 +17,7 @@ return(
       <Navbar.Brand href="/"><h4>Employee Poll</h4></Navbar.Brand>
       <Nav className="me-auto">
        <Link className='nav-link me-4 ' to="/">Home</Link>
-        <Link className='nav-link me-4' to="/new">New Poll</Link>
+        <Link className='nav-link me-4' to="/add">New Poll</Link>
         <Link className='nav-link me-4' to="/leaderboard">Leadboard</Link>
       </Nav>
       <Navbar.Toggle />

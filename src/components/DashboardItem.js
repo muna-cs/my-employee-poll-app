@@ -8,7 +8,7 @@ const DashboardItem= ( {question} ) =>{
     const toQuestion = (e, id) => {
         e.preventDefault();
     
-        navigate(`/question/${id}`);
+        navigate(`/questions/${id}`);
       };
 
 return(

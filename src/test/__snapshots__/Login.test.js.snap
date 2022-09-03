@@ -52,6 +52,7 @@ Object {
               data-testid="UserName"
               id="UserName"
               name="UserName"
+              required=""
               type="text"
             />
           </div>
@@ -78,7 +79,8 @@ Object {
               data-testid="Password"
               id="Password"
               name="Password"
-              type="text"
+              required=""
+              type="password"
             />
           </div>
           <div
@@ -157,6 +159,7 @@ Object {
             data-testid="UserName"
             id="UserName"
             name="UserName"
+            required=""
             type="text"
           />
         </div>
@@ -183,7 +186,8 @@ Object {
             data-testid="Password"
             id="Password"
             name="Password"
-            type="text"
+            required=""
+            type="password"
           />
         </div>
         <div

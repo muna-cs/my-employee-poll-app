@@ -1,6 +1,5 @@
-import { Row,Col,Card,Container} from 'react-bootstrap';
+import { Row,Col,Card,Container,Tab,Nav} from 'react-bootstrap';
 import { connect } from "react-redux";
-import NavMenu from './NavMenu';
 import DashboardItem from './DashboardItem';
 import React from 'react'
 
@@ -9,11 +8,24 @@ const Dashboard= ( props ) =>{
 
 return(
   <Container className=" bg-light p-5">    
-       
-        <Row className='mt-5'>
+       <Tab.Container defaultActiveKey="new"  justify>
+      <Row>
+          <Nav variant="pills" >
+            <Nav.Item>
+              <Nav.Link eventKey="new">
+                New Questions</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="done">Done Questions</Nav.Link>
+            </Nav.Item>
+          </Nav>
+          </Row>
+          <Row>
+          <Tab.Content>
+            <Tab.Pane eventKey="new">
+            <Row className='mt-5'>
         <Col sm>
         <Card>
-      <Card.Header><h4>New Questions</h4></Card.Header>
       <Card.Body>
         <Row>
      {props.questionInfoNotDone.map((q) => (
@@ -25,10 +37,11 @@ return(
     </Card>
         </Col>
         </Row>
-        <Row className='mt-5'>
+            </Tab.Pane>
+            <Tab.Pane eventKey="done">
+            <Row className='mt-5'>
         <Col >
         <Card>
-      <Card.Header><h4>Done Questions</h4></Card.Header>
       <Card.Body>
       <Row>
      {props.questionInfoDone.map((q) => (
@@ -39,6 +52,12 @@ return(
     </Card>
         </Col>
         </Row>
+            </Tab.Pane>
+          </Tab.Content>
+      </Row>
+    </Tab.Container>
+       
+        
     </Container>
     )
 
