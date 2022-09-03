@@ -7,5 +7,20 @@ This application allows users to create new poll, answer existing polls, and vie
  use `npm install` to download needed packages. then, use `npm start` to start the app. 
  For testing use  `npm run test`
 
- ### Example
- ![video](public/React-PollApp.webm)
+ ### Screenshots
+ -Login-
+
+ ![Login](public/login.png)
+
+ -Dashboard-
+
+ ![Dashboard](public/dashboard.png)
+
+-New Poll-
+
+![New Poll](public/newpoll.png)
+
+-Leaderboard-
+
+![Leaderboard](public/leaderboard.png)
+
