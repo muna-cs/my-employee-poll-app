@@ -17,7 +17,6 @@ const withRouter = (Component) => {
   };
   
 const Poll= (props) =>{
-console.log(props.authedUser);
 const [answer,setAnswer]= useState(props.SelectedAnswer?props.SelectedAnswer:'');
 const handleChange = (e) => {
   setAnswer(e.target.value);
