@@ -2,11 +2,9 @@ import {Button, Image, Row,Col,Alert} from 'react-bootstrap';
 import { connect } from "react-redux";
 import logo from '../asset/login.jpg'
 import { setAuthedUser } from '../actions/authedUser';
-import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react'
 const Login= ( props ) =>{
  const [msgError, setMsg]= useState(false);
-  let navigate = useNavigate();
   
   const handelUserLogin=(e)=> {
   e.preventDefault();
@@ -46,7 +44,7 @@ return(
                             name="UserName"
                             id="UserName"
                             className="form-control" data-testid="UserName"
-                            ></input>
+                            required ></input>
       </Col>
       <Col sm></Col>
      </Row>
@@ -55,11 +53,11 @@ return(
       <Col sm>
       <label className="h4">Password</label>
       <input
-                            type="text"
+                            type="password"
                             name="Password"
                             id="Password"
                             className="form-control" data-testid="Password"
-                            ></input>
+                            required ></input>
       </Col>
       <Col sm></Col>
      </Row>

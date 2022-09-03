@@ -37,7 +37,7 @@ describe('Testing Login', () => {
     });
 
 
-    it('will display an error when expected fields not exist', () => {
+    it('it will verify if expected fields are exist', () => {
         var component =  render(
             <Provider store={store}>
         <Router>
@@ -48,14 +48,13 @@ describe('Testing Login', () => {
         var passwordInput = component.getByTestId('Password')
         expect(usernameInput).toBeInTheDocument();
         expect(passwordInput).toBeInTheDocument();
-
         var LoginButton = component.getByText('Login')
         expect(LoginButton).toBeInTheDocument();
         
 
          });
 
-         it('will display an alert if username or password is wrong', () => {
+         it('it will display an alert if user is not exist', () => {
             var component =  render(
                 <Provider store={store}>
             <Router>

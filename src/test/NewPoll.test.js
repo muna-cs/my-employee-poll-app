@@ -22,7 +22,7 @@ export const store = configureStore({
 describe('Testing NewPoll', () => {
     
    
-        it('it will verify if fields are exist', () => {
+        it('it will verify if expected fields are exist', () => {
             var component =  render(
                 <Provider store={store}>
             <Router>

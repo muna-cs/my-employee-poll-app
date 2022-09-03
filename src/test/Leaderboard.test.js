@@ -18,21 +18,27 @@ export const store = configureStore({
   },
   middleware: [thunk, logger]
 });
-
+var component =  render(
+    <Provider store={store}>
+<Router>
+<Leaderboard/>
+   </Router>
+   </Provider>
+    );
 describe('Testing Leaderboard', () => {
-    
-    it('will create create snapshot', () => {
-        const component =  render(
+   
+    it('it will create create snapshot', () => {
+        var component =  render(
             <Provider store={store}>
         <Router>
-           <Leaderboard/>
+        <Leaderboard/>
            </Router>
            </Provider>
             );
             expect(component).toMatchSnapshot();
         });
 
-        it('it will verify if user list is exist', () => {
+        it('it will verify if expected user list is exist', () => {
             var component =  render(
                 <Provider store={store}>
             <Router>

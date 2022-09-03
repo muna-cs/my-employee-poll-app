@@ -40,8 +40,8 @@ return(
 const mapStateToProps = ({authedUser, users }) => ({
     authedUser:users[authedUser],
     UsersInfo: Object.values(users).sort(
-      (a, b) => (Object.keys(b.answers).length + Object.keys(b.questions).length) -
-       (Object.keys(a.answers).length + Object.keys(a.questions).length)
+      (a, b) => (Object.keys(b.answers).length + b.questions.length) -
+       (Object.keys(a.answers).length + a.questions.length)
     ),
 
 })
