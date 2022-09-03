@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { render ,fireEvent} from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
 import { Provider } from "react-redux";
 import { configureStore } from '@reduxjs/toolkit';
@@ -8,7 +8,7 @@ import users from '../reducers/users';
 import questions from '../reducers/questions';
 import logger from '../middleware/logger';
 import thunk from 'redux-thunk';
-import Leaderboard from '../components/Leaderboard';
+import NewPoll from '../components/NewPoll';
 
 export const store = configureStore({
   reducer: {
@@ -19,31 +19,20 @@ export const store = configureStore({
   middleware: [thunk, logger]
 });
 
-describe('Testing Leaderboard', () => {
+describe('Testing NewPoll', () => {
     
-    it('will create create snapshot', () => {
-        const component =  render(
-            <Provider store={store}>
-        <Router>
-           <Leaderboard/>
-           </Router>
-           </Provider>
-            );
-            expect(component).toMatchSnapshot();
-        });
-
-        it('it will verify if user list is exist', () => {
+   
+        it('it will verify if fields are exist', () => {
             var component =  render(
                 <Provider store={store}>
             <Router>
-            <Leaderboard/>
+            <NewPoll/>
                </Router>
                </Provider>
                 );
-            var UserList = component.getByTestId('UserList')
-            expect(UserList).toBeInTheDocument();
-           
-            
+             expect(component.getByTestId('SubmitButton')).toBeInTheDocument();
+            expect(component.getByTestId('op1input')).toBeInTheDocument();
+            expect(component.getByTestId('op2input')).toBeInTheDocument();
     
              });
 

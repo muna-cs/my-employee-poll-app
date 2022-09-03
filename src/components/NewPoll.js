@@ -29,13 +29,13 @@ return(
         <Form>
       <Form.Group className="mb-3" >
         <Form.Label className="mt-3"><h4>Option One</h4></Form.Label>
-        <Form.Control id="op1txt" as="textarea" rows={3} placeholder="Enter Option One" />
+        <Form.Control id="op1txt" as="textarea" data-testid="op2input" rows={3} placeholder="Enter Option One" />
        
         <Form.Label className="mt-3"><h4>Option Two</h4></Form.Label>
-        <Form.Control id="op2txt" as="textarea" rows={3} placeholder="Enter Option Two" />
+        <Form.Control id="op2txt" as="textarea" data-testid="op1input" rows={3} placeholder="Enter Option Two" />
       </Form.Group>
       
-      <Button variant="primary" onClick={AddQuestion}>
+      <Button variant="primary" onClick={AddQuestion} data-testid="SubmitButton">
         Submit
       </Button>
     </Form>

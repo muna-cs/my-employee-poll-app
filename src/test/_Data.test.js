@@ -12,7 +12,7 @@ import { _saveQuestion , _saveQuestionAnswer } from "../utils/_DATA";
 
     });
   
-    it("it will return error if did not save answer ", async () => {
+    it("it will return error if did not save question ", async () => {
       const question={author:"tylermcginnis"}
       await expect(_saveQuestion(question)).rejects.toEqual(
         "Please provide optionOneText, optionTwoText, and author"

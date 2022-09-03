@@ -13,7 +13,7 @@ return(
        <hr/>
         </Row>
         <Row>
-        <Table striped bordered hover>
+        <Table data-testid='UserList'  striped bordered hover>
       <thead>
         <tr>
           <th> Name</th>
@@ -37,10 +37,12 @@ return(
 );
 
 }
-const mapStateToProps = ({authedUser, users, questions }) => ({
+const mapStateToProps = ({authedUser, users }) => ({
     authedUser:users[authedUser],
-    UsersInfo: Object.values(users),
-    questionsInfo: Object.values(questions)
+    UsersInfo: Object.values(users).sort(
+      (a, b) => (Object.keys(b.answers).length + Object.keys(b.questions).length) -
+       (Object.keys(a.answers).length + Object.keys(a.questions).length)
+    ),
 
 })
 export default connect(mapStateToProps)(Leaderboard);

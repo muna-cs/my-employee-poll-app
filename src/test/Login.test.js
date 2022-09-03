@@ -22,7 +22,7 @@ export const store = configureStore({
 
 
 
-describe('Login', () => {
+describe('Testing Login', () => {
     var component =  render(
         <Provider store={store}>
     <Router>
