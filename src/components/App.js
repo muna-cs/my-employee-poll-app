@@ -30,7 +30,7 @@ const App = (props) =>
        <Route path="/question/:id" element={props.IsAuthed?<Poll />:<Login/>} />
         <Route path="/new" element={props.IsAuthed?<NewPoll />:<Login/>} /> 
          <Route path="/leaderboard" element={props.IsAuthed?<Leaderboard />:<Login/>} /> 
-         <Route path='*'  element={props.IsAuthed?<Page404 />:<Login/>} />
+         <Route path='/404'  element={props.IsAuthed?<Page404 />:<Login/>} />
      </Routes>
     </Container>
     </Fragment>
